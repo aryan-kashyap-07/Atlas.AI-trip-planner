@@ -10,11 +10,11 @@ import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 function Hero() {
   const cards = [
-    { title: 'Adventure Awaits', description: 'Discover new destinations.', image: '/public/image1.jpg' },
+    { title: 'Adventure Awaits', description: 'Discover new destinations.', image: '/public/image4.jpg' },
     { title: 'Plan Your Trip', description: 'Tailored itineraries for you.', image: '/public/image2.jpg' },
-    { title: 'Explore the World', description: 'Unforgettable experiences.', image: '/public/image3.jpg' },
-    { title: 'Luxury Travel', description: 'Experience comfort.', image: '/public/image4.jpg' },
-    { title: 'Cultural Tours', description: 'Dive into history.', image: '/public/image5.jpg' },
+    { title: 'Explore the World', description: 'Unforgettable experiences.', image: '/public/image5.jpg' },
+    { title: 'Luxury Travel', description: 'Experience comfort.', image: '/public/image6.jpg' },
+    { title: 'Cultural Tours', description: 'Dive into history.', image: '/public/image3.jpg' },
   ];
 
   return (
@@ -23,7 +23,7 @@ function Hero() {
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={3}
-        spaceBetween={30}
+        spaceBetween={20}
         loop={true}
         centeredSlides={true}
         autoplay={{
@@ -32,12 +32,12 @@ function Hero() {
         }}
         navigation
         pagination={{ clickable: true }}
-        className="absolute top-0 left-0 w-full h-full"
+        className="absolute top-[60px] left-0 w-full h-full"
       >
         {cards.map((card, index) => (
           <SwiperSlide key={index}>
             <div
-              className="relative rounded-lg overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-105"
+              className="relative rounded-lg overflow-hidden shadow-xl transform transition-transform duration-500"
               style={{
                 backgroundImage: `url(${card.image})`,
                 backgroundSize: 'cover',
@@ -45,7 +45,7 @@ function Hero() {
                 height: '80vh',
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-75"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
               <div className="absolute bottom-5 left-5 text-white z-10">
                 <h3 className="text-3xl font-semibold">{card.title}</h3>
                 <p className="mt-2 text-sm">{card.description}</p>
@@ -57,12 +57,12 @@ function Hero() {
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-20">
-        <div className="bg-black bg-opacity-20 backdrop-blur-lg p-8 rounded-lg shadow-lg">
+        <div className="bg-black bg-opacity-10 backdrop-blur-[2px] p-8 rounded-lg shadow-lg">
           <h1 className="text-5xl font-extrabold mb-6">
-            <span className="text-[#00aaff]">"Unleash Your Next Adventure"</span>
+            <span className="text-[#1e9cfc]">"Unleash Your Next Adventure"</span>
             <span className="text-white">: Tailored Itineraries Just for You!</span>
           </h1>
-          <p className="text-lg text-gray-300 mb-8">
+          <p className="text-xl white mb-8">
             Your personal trip planner and travel curator, creating custom itineraries tailored to your interests and budget.
           </p>
           <Link to={'/create-trip'}>
