@@ -71,7 +71,7 @@ function Createtrip() {
                   key={index}
                   onClick={()=>handleInputChange('budget',item.title)}
                   className={`p-6 border border-gray-300 rounded-lg cursor-pointer hover:shadow-xl transition duration-300 
-                  ease-in-out transform hover:scale-105 bg-white bg-opacity-70 ${formData?.budget==item.title&&'shadow-lg bg-slate-400 scale-105 border-black'}`}
+                  ease-in-out transform hover:scale-105 bg-white bg-opacity-70 ${formData?.budget==item.title&&'shadow-lg bg-slate-500 scale-105 border-black'}`}
                 >
                   <div className="text-4xl text-blue-500">{item.icon}</div>
                   <h3 className="font-semibold text-lg mt-2 text-black">{item.title}</h3>
@@ -89,7 +89,7 @@ function Createtrip() {
                   key={index}
                   onClick={()=>handleInputChange('noofpeople',item.people)}
                   className={`p-6 border border-gray-300 rounded-lg cursor-pointer hover:shadow-xl transition duration-300 ease-in-out 
-                  transform hover:scale-105 bg-white bg-opacity-70 ${formData?.noofpeople==item.people&&'shadow-lg bg-slate-400 scale-105 border-black'}`}
+                  transform hover:scale-105 bg-white bg-opacity-70 ${formData?.noofpeople==item.people&&'shadow-lg bg-slate-500 scale-105 border-black'}`}
                 >
                   <div className="text-4xl text-green-500">{item.icon}</div>
                   <h3 className="font-semibold text-lg mt-2 text-black">{item.title}</h3>
